@@ -5,7 +5,6 @@
  */
 package onitama_berchiche_gaubil;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.HashMap;
 
@@ -35,7 +34,7 @@ public class Partie implements IPartie {
     //méthodes: 
     
     
-    public void initialiserPartie(String  nom1, String couleur1, String nom2, String couleur2){
+    public void initialiserPartie(String  nomBas, String nomHaut){
         //création des cartes
         //-------------------
         Carte carte1 = new Carte("Dragon", new int[] {2, 2}, 
@@ -86,20 +85,20 @@ public class Partie implements IPartie {
         cartesJoueur1[0] = tasDeCartes[tabTirage[0]];
         cartesJoueur1[1] = tasDeCartes[tabTirage[1]];
         
-        Joueur joueur1 = new Joueur(nom1, couleur1, cartesJoueur1, new int[] {4, 2}); //joueur 1 en bas
+        Joueur joueurBas = new Joueur(nomBas, cartesJoueur1, 1); //joueur 1 en bas
         
         Carte[] cartesJoueur2 = new Carte[2];
         cartesJoueur2[0] = tasDeCartes[tabTirage[2]];
         cartesJoueur2[1] = tasDeCartes[tabTirage[3]];
         
-        Joueur joueur2 = new Joueur(nom2, couleur2, cartesJoueur2, new int[] {0, 2});
+        Joueur joueurHaut = new Joueur(nomHaut, cartesJoueur2, -1);
         
-        joueurs.put(nom1, joueur1);
-        joueurs.put(nom2, joueur2);
+        joueurs.put(nomBas, joueurBas);
+        joueurs.put(nomHaut, joueurHaut);
         
         carteFlottante = tasDeCartes[tabTirage[4]];
         
-        joueurCourant = joueur1;
+        joueurCourant = joueurBas;
         
         //disposer les pions sur la grille:
         //---------------------------------
@@ -108,17 +107,17 @@ public class Partie implements IPartie {
                 grille[i][j] = new Cellule();
             }
         }
-        grille[0][0].ajouterPiece(new Piece(typePiece.PION, joueur1));
-        grille[0][1].ajouterPiece(new Piece(typePiece.PION, joueur1));
-        grille[0][2].ajouterPiece(new Piece(typePiece.ROI, joueur1));
-        grille[0][3].ajouterPiece(new Piece(typePiece.PION, joueur1));
-        grille[0][4].ajouterPiece(new Piece(typePiece.PION, joueur1));
+        grille[0][0].ajouterPiece(new Piece(typePiece.PION, joueurBas));
+        grille[0][1].ajouterPiece(new Piece(typePiece.PION, joueurBas));
+        grille[0][2].ajouterPiece(new Piece(typePiece.ROI, joueurBas));
+        grille[0][3].ajouterPiece(new Piece(typePiece.PION, joueurBas));
+        grille[0][4].ajouterPiece(new Piece(typePiece.PION, joueurBas));
         
-        grille[4][0].ajouterPiece(new Piece(typePiece.PION, joueur2));
-        grille[4][1].ajouterPiece(new Piece(typePiece.PION, joueur2));
-        grille[4][2].ajouterPiece(new Piece(typePiece.ROI, joueur2));
-        grille[4][3].ajouterPiece(new Piece(typePiece.PION, joueur2));
-        grille[4][4].ajouterPiece(new Piece(typePiece.PION, joueur2));
+        grille[4][0].ajouterPiece(new Piece(typePiece.PION, joueurHaut));
+        grille[4][1].ajouterPiece(new Piece(typePiece.PION, joueurHaut));
+        grille[4][2].ajouterPiece(new Piece(typePiece.ROI, joueurHaut));
+        grille[4][3].ajouterPiece(new Piece(typePiece.PION, joueurHaut));
+        grille[4][4].ajouterPiece(new Piece(typePiece.PION, joueurHaut));
         
         
     }    

@@ -22,7 +22,7 @@ public class Onitama_berchiche_gaubil {
         
         // les lignes suivantes sont pour tester
         // elles doivent être supprimées ou commentées
-        partie.initialiserPartie("clara", "rouge", "didier", "jaune");
+        partie.initialiserPartie("clara", "didier");
         for (String fichier : partie.listeCartes("clara")) {
             System.out.println(fichier);
         }

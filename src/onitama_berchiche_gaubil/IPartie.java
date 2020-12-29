@@ -11,7 +11,7 @@ package onitama_berchiche_gaubil;
  */
 public interface IPartie {
     
-    public void initialiserPartie(String  nom1, String couleur1, String nom2, String couleur2);        
+    public void initialiserPartie(String  nomBas, String nomHaut);        
     public boolean choisirCarte(String fichierCarte);
     public boolean choisirPiece(int[] coordonnees);
     public boolean choisirDestination(int[] coordonnees);

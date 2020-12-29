@@ -15,19 +15,26 @@ public class Joueur {
     //création des attributs: 
     
     public String nom;
-    private String couleur;
     public HashMap<String, Carte> cartes = new HashMap<String, Carte>();
+    public int directionAdverse; // 1 lorsque on doit monter pour rejoindre le temple adverse, -1 si on doit descendre
     public int[] templeAdverse;
     
     //création des méthodes:
     
-    public Joueur (String nomJoueur, String couleurJoueur, Carte[] cartesJoueurs,
-            int[] coordonnesTemple){
+    // @param direction : 1 lorsque on doit monter pour rejoindre le temple adverse, 
+    //      -1 si on doit descendre
+    public Joueur (String nomJoueur, Carte[] cartesJoueurs,
+            int direction){
         nom = nomJoueur; 
-        couleur = couleurJoueur; 
         for(Carte carte : cartesJoueurs) {
             cartes.put(carte.fichierImage, carte);
         }
-        templeAdverse = coordonnesTemple;
+        directionAdverse = direction;
+        if (directionAdverse == 1) {
+            templeAdverse = new int[] {4, 2};
+        } else {
+            templeAdverse = new int[] {0, 2};
+        }
+        
     }
 }
