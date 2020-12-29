@@ -37,38 +37,38 @@ public class Partie implements IPartie {
     public void initialiserPartie(String  nomBas, String nomHaut){
         //création des cartes
         //-------------------
-        Carte carte1 = new Carte("Dragon", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageDragon");
-        Carte carte2 = new Carte("Mante", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageMante");
-        Carte carte3 = new Carte("Cheval", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageCheval");
-        Carte carte4 = new Carte("Sanglier", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}}  , "fichierImageSanglier");
-        Carte carte5 = new Carte("Grenouille", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}}  , "fichierImageGrenouille");
-        Carte carte6 = new Carte("Singe", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageSinge");
-        Carte carte7 = new Carte("Crabe", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageCrabe");
-        Carte carte8 = new Carte("Oie", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageOie");
-        Carte carte9 = new Carte("Tigre", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageTigre");
-        Carte carte10 = new Carte("Coq", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageCoq");
-        Carte carte11 = new Carte("Grue", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageGrue");
-        Carte carte12 = new Carte("Anguille", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageAnguille");
-        Carte carte13 = new Carte("Cobra", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageCobra");
-        Carte carte14 = new Carte("Boeuf", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageBoeuf");
-        Carte carte15 = new Carte("Lapin", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageLapin");
-        Carte carte16 = new Carte("Elephant", new int[] {2, 2}, 
-                new int[][] {{3, 0},{1, 1}, {1, 3}, {3, 4}} , "fichierImageElephant");
+        Carte carte1 = new Carte("Dragon",  
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageDragon");
+        Carte carte2 = new Carte("Mante",  
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageMante");
+        Carte carte3 = new Carte("Cheval",  
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCheval");
+        Carte carte4 = new Carte("Sanglier", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageSanglier");
+        Carte carte5 = new Carte("Grenouille", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageGrenouille");
+        Carte carte6 = new Carte("Singe", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageSinge");
+        Carte carte7 = new Carte("Crabe", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCrabe");
+        Carte carte8 = new Carte("Oie", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageOie");
+        Carte carte9 = new Carte("Tigre", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageTigre");
+        Carte carte10 = new Carte("Coq", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCoq");
+        Carte carte11 = new Carte("Grue", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageGrue");
+        Carte carte12 = new Carte("Anguille", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageAnguille");
+        Carte carte13 = new Carte("Cobra", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCobra");
+        Carte carte14 = new Carte("Boeuf", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageBoeuf");
+        Carte carte15 = new Carte("Lapin", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageLapin");
+        Carte carte16 = new Carte("Elephant", 
+                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageElephant");
         
         tasDeCartes = new Carte[] {carte1, carte2, carte3, carte4, carte5, 
             carte6, carte7, carte8, carte9, carte10, carte11, carte12, carte13, 
@@ -146,15 +146,13 @@ public class Partie implements IPartie {
         
     }
     public boolean choisirDestination(int[] coordonnees){
-        int[][] destinationsPossibles = new int[carteChoisie.positionArrivee.length][];
-        for(int i = 0; i < carteChoisie.positionArrivee.length; i++) {
-            destinationsPossibles[i] = new int[] 
-            {(carteChoisie.positionArrivee[i][0] - carteChoisie.positionDepart[0] + coordoneesDepart[0]), 
-                (carteChoisie.positionArrivee[i][1] - carteChoisie.positionDepart[1] + coordoneesDepart[1])};
-        }
-        for (int[] xy : destinationsPossibles) {
-            if (xy[0] == coordonnees[0]) {
-                if (xy[1] == coordonnees[1]) {
+        int[] vecteurDeplacement = new int[2];
+        vecteurDeplacement[0] = coordonnees[0] - coordoneesDepart[0];
+        vecteurDeplacement[1] = coordonnees[1] - coordoneesDepart[1];
+        
+        for (int[] vecteur : carteChoisie.vecteursDeplacements) {
+            if ((vecteur[0] * joueurCourant.directionAdverse) == vecteurDeplacement[0]) {
+                if ((vecteur[1] * joueurCourant.directionAdverse) == vecteurDeplacement[1]) {
                     coordoneesArrivee = coordonnees;
                     return true;
                 } 

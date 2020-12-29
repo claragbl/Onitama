@@ -12,14 +12,12 @@ package onitama_berchiche_gaubil;
 public class Carte {
     
     private String nom;
-    public int[] positionDepart;
-    public int[][] positionArrivee;
+    public int[][] vecteursDeplacements;
     public String fichierImage;
     
-    public Carte (String leNom, int[] laPositionDepart, int[][] laPositionArrivee, String leFichierImage) {
+    public Carte (String leNom, int[][] vecteurs, String leFichierImage) {
         nom = leNom;
-        positionDepart = laPositionDepart;
-        positionArrivee = laPositionArrivee;
+        vecteursDeplacements = vecteurs;
         fichierImage = leFichierImage; 
     }
 }
