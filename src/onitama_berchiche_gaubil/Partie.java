@@ -37,39 +37,73 @@ public class Partie implements IPartie {
     public void initialiserPartie(String  nomBas, String nomHaut){
         //création des cartes
         //-------------------
-        Carte carte1 = new Carte("Dragon",  
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageDragon");
-        Carte carte2 = new Carte("Mante",  
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageMante");
-        Carte carte3 = new Carte("Cheval",  
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCheval");
-        Carte carte4 = new Carte("Sanglier", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageSanglier");
-        Carte carte5 = new Carte("Grenouille", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageGrenouille");
-        Carte carte6 = new Carte("Singe", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageSinge");
-        Carte carte7 = new Carte("Crabe", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCrabe");
-        Carte carte8 = new Carte("Oie", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageOie");
-        Carte carte9 = new Carte("Tigre", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageTigre");
-        Carte carte10 = new Carte("Coq", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCoq");
-        Carte carte11 = new Carte("Grue", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageGrue");
-        Carte carte12 = new Carte("Anguille", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageAnguille");
-        Carte carte13 = new Carte("Cobra", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCobra");
-        Carte carte14 = new Carte("Boeuf", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageBoeuf");
-        Carte carte15 = new Carte("Lapin", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageLapin");
-        Carte carte16 = new Carte("Elephant", 
-                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageElephant");
+        // version de test avec vecteur du Dragin sur toutes les cartes
+//        Carte carte1 = new Carte("Dragon",  
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageDragon");
+//        Carte carte2 = new Carte("Mante",  
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageMante");
+//        Carte carte3 = new Carte("Cheval",  
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCheval");
+//        Carte carte4 = new Carte("Sanglier", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageSanglier");
+//        Carte carte5 = new Carte("Grenouille", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageGrenouille");
+//        Carte carte6 = new Carte("Singe", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageSinge");
+//        Carte carte7 = new Carte("Crabe", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCrabe");
+//        Carte carte8 = new Carte("Oie", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageOie");
+//        Carte carte9 = new Carte("Tigre", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageTigre");
+//        Carte carte10 = new Carte("Coq", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCoq");
+//        Carte carte11 = new Carte("Grue", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageGrue");
+//        Carte carte12 = new Carte("Anguille", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageAnguille");
+//        Carte carte13 = new Carte("Cobra", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageCobra");
+//        Carte carte14 = new Carte("Boeuf", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageBoeuf");
+//        Carte carte15 = new Carte("Lapin", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageLapin");
+//        Carte carte16 = new Carte("Elephant", 
+//                new int[][] {{1, -2},{-1, -1}, {-1, 1}, {1, 2}} , "fichierImageElephant");
         
+        Carte carte1 = new Carte("Dragon",  
+                new int[][] {{1, -2}, {-1, -1}, {-1, 1}, {1, 2}} , "dragon.jpeg");
+        Carte carte2 = new Carte("Mante",  
+                new int[][] {{1, -1}, {-1, 0}, {1, 1}} , "mante.jpeg");
+        Carte carte3 = new Carte("Cheval",  
+                new int[][] {{0, -1}, {1, 0}, {-1, 0}} , "cheval.jpeg");
+        Carte carte4 = new Carte("Sanglier", 
+                new int[][] {{0, -1}, {1, 0}, {0, 1}} , "sanglier.jpeg");
+        Carte carte5 = new Carte("Grenouille", 
+                new int[][] {{0, -2}, {1, -1}, {-1, 1}} , "grenouille.jpeg");
+        Carte carte6 = new Carte("Singe", 
+                new int[][] {{-1, -1}, {1, -1}, {-1, 1}, {1, 1}} , "singe.jpeg");
+        Carte carte7 = new Carte("Crabe", 
+                new int[][] {{0, -2}, {1, 0}, {0, 2}} , "crabe.jpeg");
+        Carte carte8 = new Carte("Oie", 
+                new int[][] {{0, -1}, {1, -1}, {0, 1}, {-1, 1}} , "oie.jpeg");
+        Carte carte9 = new Carte("Tigre", 
+                new int[][] {{2, 0},{-1, 0}} , "tigre.jpeg");
+        Carte carte10 = new Carte("Coq", 
+                new int[][] {{-1, -1}, {0, -1}, {0, 1}, {1, 1}} , "coq.jpeg");
+        Carte carte11 = new Carte("Grue", 
+                new int[][] {{-1, -1}, {1, 0}, {-1, 1}} , "grue.jpeg");
+        Carte carte12 = new Carte("Anguille", 
+                new int[][] {{-1, -1}, {1, -1}, {0, 1}} , "anguille.jpeg");
+        Carte carte13 = new Carte("Cobra", 
+                new int[][] {{0, -1}, {-1, 1}, {1, 1}} , "cobra.jpeg");
+        Carte carte14 = new Carte("Boeuf", 
+                new int[][] {{1, 0}, {-1, 0}, {0, 1}} , "boeuf.jpeg");
+        Carte carte15 = new Carte("Lapin", 
+                new int[][] {{1, 1}, {-1, -1}, {0, 2}} , "lapin.jpeg");
+        Carte carte16 = new Carte("Elephant", 
+                new int[][] {{0, -1}, {1, -1}, {0, 1}, {1, 1}} , "elephant.jpeg");
+
         tasDeCartes = new Carte[] {carte1, carte2, carte3, carte4, carte5, 
             carte6, carte7, carte8, carte9, carte10, carte11, carte12, carte13, 
             carte14, carte15, carte16};
